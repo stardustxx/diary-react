@@ -6,7 +6,7 @@ class Home extends Component {
   
   componentWillMount() {
     this.databaseRef = firebase.database().ref('items');
-    console.log('databaseRef', this.databaseRef);
+    // console.log('databaseRef', this.databaseRef);
   }
   
   render() {

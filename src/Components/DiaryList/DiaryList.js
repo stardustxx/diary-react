@@ -31,8 +31,13 @@ class DiaryList extends Component {
         <List>
           <Subheader>Diary</Subheader>
           {
-            this.state.test.map((value) => {
-              return <DiaryItem key={value.id} title={value.title} content={value.content} />
+            this.state.test.map((value, index) => {
+              return (
+                <div key={value.id} >
+                  {index !== 0 && <Divider inset={false} />}
+                  <DiaryItem title={value.title} content={value.content} />
+                </div>
+              )
             })
           }
         </List>
