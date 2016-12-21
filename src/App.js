@@ -1,11 +1,11 @@
 import React, {Component} from 'react';
+import {Router, Route, browserHistory} from 'react-router'
 import './App.css';
-import NavBar from './Components/NavBar/NavBar';
 import Home from './Pages/Home/Home';
+import NewNote from './Pages/NewNote/NewNote';
 import * as firebase from 'firebase';
 import injectTapEventPlugin from 'react-tap-event-plugin';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-
 class App extends Component {
 
   constructor(props) {
@@ -26,8 +26,10 @@ class App extends Component {
     return (
       <MuiThemeProvider>
         <div className="App">
-          <NavBar/>
-          <Home/>
+          <Router history={browserHistory}>
+            <Route path="/" component={Home} />
+            <Route path="/new" component={NewNote} />
+          </Router>
         </div>
       </MuiThemeProvider>
     );
