@@ -1,10 +1,19 @@
 import React, {Component} from 'react';
 import Nav from '../../Components/Nav/Nav';
 import SignUpForm from '../../Components/SignUpForm/SignUpForm';
-import {Link} from 'react-router';
+import * as firebase from 'firebase';
+import {Link, browserHistory} from 'react-router';
 import './SignUp.css';
 
 class SignUp extends Component {
+
+  componentDidMount() {
+    firebase.auth().onAuthStateChanged((user) => {
+      if (user) {
+        browserHistory.push("/");
+      }
+    });   
+  }
 
   render() {
     return (

@@ -58,14 +58,20 @@ class SignUpForm extends Component {
     }
   }
 
+  onTextKeyPress = (event) => {
+    if (event.charCode === 13) {
+      this.onSignUpClicked();
+    }
+  }
+
   render() {
     return (
       <div className='SignUpForm'>
-        <TextField floatingLabelText="Email" type="email" style={this.inputStyle} onChange={this.onEmailChange} />
+        <TextField floatingLabelText="Email" type="email" style={this.inputStyle} onChange={this.onEmailChange} onKeyPress={this.onTextKeyPress} />
         <br/>
-        <TextField floatingLabelText="Password" type="password" style={this.inputStyle} onChange={this.onPasswordChange} />
+        <TextField floatingLabelText="Password" type="password" style={this.inputStyle} onChange={this.onPasswordChange} onKeyPress={this.onTextKeyPress} />
         <br/>
-        <TextField floatingLabelText="Confirm Password" type="password" style={this.inputStyle} onChange={this.onConfirmPasswordChange} />
+        <TextField floatingLabelText="Confirm Password" type="password" style={this.inputStyle} onChange={this.onConfirmPasswordChange} onKeyPress={this.onTextKeyPress} />
         <br/>
         <RaisedButton
           label="Sign Up"

@@ -4,10 +4,7 @@
 }
 
 .NewNote .body .editor {
-  border: 1px solid grey;
+  /*border: 1px solid grey;*/
   padding: 6px;
-}
-
-.NewNote .body .editor {
   min-height: 300px;
 }

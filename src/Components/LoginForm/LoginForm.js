@@ -40,7 +40,7 @@ class LoginForm extends Component {
     return this.state.email && this.state.password;
   }
 
-  onLoginClicked =() => {
+  onLoginClicked = () => {
     if (this.isFormFilled()) {
       firebase.auth().signInWithEmailAndPassword(this.state.email, this.state.password).then((success) => {
         this.props.onLoginSuccess();
@@ -51,12 +51,18 @@ class LoginForm extends Component {
     }
   }
 
+  onTextKeyPress = (event) => {
+    if (event.charCode === 13) {
+      this.onLoginClicked();
+    }
+  }
+
   render() {
     return (
       <div className="LoginForm">
-        <TextField floatingLabelText="Email" style={this.inputStyle} onChange={this.onEmailChange} />
+        <TextField floatingLabelText="Email" style={this.inputStyle} onChange={this.onEmailChange} onKeyPress={this.onTextKeyPress} />
         <br/>
-        <TextField floatingLabelText="Password" type="password" style={this.inputStyle} onChange={this.onPasswordChange} />
+        <TextField floatingLabelText="Password" type="password" style={this.inputStyle} onChange={this.onPasswordChange} onKeyPress={this.onTextKeyPress} />
         <br/>
         <RaisedButton
           label="Login"

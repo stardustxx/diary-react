@@ -26,12 +26,10 @@ class App extends Component {
 
   componentDidMount() {
     firebase.auth().onAuthStateChanged((user) => {
-      if (user) {
-        browserHistory.push("/");
-      } else {
+      if (!user) {
         browserHistory.push("/login");
       }
-    }) 
+    });
   }
 
   render() {
