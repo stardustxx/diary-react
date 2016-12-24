@@ -2,6 +2,8 @@ import React, {Component} from 'react';
 import {Router, Route, browserHistory} from 'react-router'
 import './App.css';
 import Home from './Pages/Home/Home';
+import Login from './Pages/Login/Login';
+import SignUp from './Pages/SignUp/SignUp';
 import NewNote from './Pages/NewNote/NewNote';
 import * as firebase from 'firebase';
 import injectTapEventPlugin from 'react-tap-event-plugin';
@@ -22,12 +24,24 @@ class App extends Component {
     injectTapEventPlugin();
   }
 
+  componentDidMount() {
+    firebase.auth().onAuthStateChanged((user) => {
+      if (user) {
+        browserHistory.push("/");
+      } else {
+        browserHistory.push("/login");
+      }
+    }) 
+  }
+
   render() {
     return (
       <MuiThemeProvider>
         <div className="App">
           <Router history={browserHistory}>
             <Route path="/" component={Home} />
+            <Route path="/login" component={Login} />
+            <Route path="/signup" component={SignUp} />
             <Route path="/new" component={NewNote} />
           </Router>
         </div>

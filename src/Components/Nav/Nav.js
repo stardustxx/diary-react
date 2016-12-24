@@ -1,6 +1,8 @@
 import React, {Component} from 'react';
 import AppBar from 'material-ui/AppBar';
 import {browserHistory} from 'react-router'
+import FlatButton from 'material-ui/FlatButton';
+import * as firebase from 'firebase';
 // import Drawer from 'material-ui/Drawer';
 // import MenuItem from 'material-ui/MenuItem';
 
@@ -11,6 +13,11 @@ class Nav extends Component {
     this.state = {
       isDrawerOpen: false
     };
+
+    let currentLocation = browserHistory.getCurrentLocation();
+    if (currentLocation.pathname === "/") {
+      this.showLogOut = true;
+    }
 
     // this.drawerContainerStyle = {
     //   'top': '64px'
@@ -28,12 +35,19 @@ class Nav extends Component {
     }
   }
 
+  onLogOutClicked = () => {
+    firebase.auth().signOut().catch((error) => {
+      console.error("sign out error", error);
+    });
+  }
+
   render() {
     return (
       <div>
         <AppBar
           title="Diary"
           iconElementLeft={this.props.leftIcon}
+          iconElementRight={this.showLogOut && <FlatButton onTouchTap={this.onLogOutClicked} label="Log out" />}
           showMenuIconButton={this.props.leftIcon ? true : false}
           onLeftIconButtonTouchTap={this.onLeftIconTouched}
           />

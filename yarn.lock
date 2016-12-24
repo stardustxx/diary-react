@@ -42,12 +42,12 @@ acorn@^4.0.1:
   resolved "https://registry.yarnpkg.com/acorn/-/acorn-4.0.4.tgz#17a8d6a7a6c4ef538b814ec9abac2779293bf30a"
 
 ajv-keywords@^1.0.0:
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/ajv-keywords/-/ajv-keywords-1.2.0.tgz#676c4f087bfe1e8b12dca6fda2f3c74f417b099c"
+  version "1.4.1"
+  resolved "https://registry.yarnpkg.com/ajv-keywords/-/ajv-keywords-1.4.1.tgz#f080e635e230baae26537ce727f260ae62b43802"
 
 ajv@^4.7.0:
-  version "4.10.0"
-  resolved "https://registry.yarnpkg.com/ajv/-/ajv-4.10.0.tgz#7ae6169180eb199192a8b9a19fd0f47fc9ac8764"
+  version "4.10.1"
+  resolved "https://registry.yarnpkg.com/ajv/-/ajv-4.10.1.tgz#6e1669b62d752424a73da9175901d0327adfc2a5"
   dependencies:
     co "^4.6.0"
     json-stable-stringify "^1.0.1"
@@ -870,14 +870,14 @@ babel-register@^6.16.0, babel-register@^6.18.0:
     mkdirp "^0.5.1"
     source-map-support "^0.4.2"
 
-babel-runtime@6.11.6, babel-runtime@^6.0.0, babel-runtime@^6.11.6, babel-runtime@^6.9.0, babel-runtime@^6.9.1:
+babel-runtime@6.11.6:
   version "6.11.6"
   resolved "https://registry.yarnpkg.com/babel-runtime/-/babel-runtime-6.11.6.tgz#6db707fef2d49c49bfa3cb64efdb436b518b8222"
   dependencies:
     core-js "^2.4.0"
     regenerator-runtime "^0.9.5"
 
-babel-runtime@^6.20.0:
+babel-runtime@^6.0.0, babel-runtime@^6.11.6, babel-runtime@^6.20.0, babel-runtime@^6.9.0, babel-runtime@^6.9.1:
   version "6.20.0"
   resolved "https://registry.yarnpkg.com/babel-runtime/-/babel-runtime-6.20.0.tgz#87300bdcf4cd770f09bf0048c64204e17806d16f"
   dependencies:
@@ -958,8 +958,8 @@ block-stream@*:
     inherits "~2.0.0"
 
 bluebird@^3.4.6:
-  version "3.4.6"
-  resolved "https://registry.yarnpkg.com/bluebird/-/bluebird-3.4.6.tgz#01da8d821d87813d158967e743d5fe6c62cf8c0f"
+  version "3.4.7"
+  resolved "https://registry.yarnpkg.com/bluebird/-/bluebird-3.4.7.tgz#f72d760be09b7f76d08ed8fae98b289a8d05fab3"
 
 boolbase@~1.0.0:
   version "1.0.0"
@@ -2065,7 +2065,7 @@ faye-websocket@~0.7.3:
 
 fb-watchman@^1.8.0, fb-watchman@^1.9.0:
   version "1.9.0"
-  resolved "http://registry.npmjs.org/fb-watchman/-/fb-watchman-1.9.0.tgz#6f268f1f347a6b3c875d1e89da7e1ed79adfc0ec"
+  resolved "https://registry.yarnpkg.com/fb-watchman/-/fb-watchman-1.9.0.tgz#6f268f1f347a6b3c875d1e89da7e1ed79adfc0ec"
   dependencies:
     bser "^1.0.2"
 
@@ -3176,8 +3176,8 @@ jsonify@~0.0.0:
   resolved "https://registry.yarnpkg.com/jsonify/-/jsonify-0.0.0.tgz#2c74b6ee41d93ca51b7b5aaee8f503631d252a73"
 
 jsonpointer@^4.0.0:
-  version "4.0.0"
-  resolved "https://registry.yarnpkg.com/jsonpointer/-/jsonpointer-4.0.0.tgz#6661e161d2fc445f19f98430231343722e1fcbd5"
+  version "4.0.1"
+  resolved "https://registry.yarnpkg.com/jsonpointer/-/jsonpointer-4.0.1.tgz#4fd92cb34e0e9db3c89c8622ecf51f9b978c6cb9"
 
 jsonwebtoken@7.1.9:
   version "7.1.9"
@@ -3569,8 +3569,8 @@ mute-stream@0.0.5:
   resolved "https://registry.yarnpkg.com/mute-stream/-/mute-stream-0.0.5.tgz#8fbfabb0a98a253d3184331f9e8deb7372fac6c0"
 
 nan@^2.3.0:
-  version "2.4.0"
-  resolved "https://registry.yarnpkg.com/nan/-/nan-2.4.0.tgz#fb3c59d45fe4effe215f0b890f8adf6eb32d2232"
+  version "2.5.0"
+  resolved "https://registry.yarnpkg.com/nan/-/nan-2.5.0.tgz#aa8f1e34531d807e9e27755b234b4a6ec0c152a8"
 
 natural-compare@^1.4.0:
   version "1.4.0"
@@ -4129,8 +4129,8 @@ postcss-reduce-idents@^2.2.2:
     postcss-value-parser "^3.0.2"
 
 postcss-reduce-initial@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/postcss-reduce-initial/-/postcss-reduce-initial-1.0.0.tgz#8f739b938289ef2e48936d7101783e4741ca9bbb"
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/postcss-reduce-initial/-/postcss-reduce-initial-1.0.1.tgz#68f80695f045d08263a879ad240df8dd64f644ea"
   dependencies:
     postcss "^5.0.4"
 
@@ -4834,8 +4834,8 @@ source-list-map@^0.1.4, source-list-map@~0.1.0, source-list-map@~0.1.7:
   resolved "https://registry.yarnpkg.com/source-list-map/-/source-list-map-0.1.7.tgz#d4b5ce2a46535c72c7e8527c71a77d250618172e"
 
 source-map-support@^0.4.2:
-  version "0.4.6"
-  resolved "https://registry.yarnpkg.com/source-map-support/-/source-map-support-0.4.6.tgz#32552aa64b458392a85eab3b0b5ee61527167aeb"
+  version "0.4.7"
+  resolved "https://registry.yarnpkg.com/source-map-support/-/source-map-support-0.4.7.tgz#7a7988e0e66241c778c78dd179199bb6bcd35bd6"
   dependencies:
     source-map "^0.5.3"
 
@@ -5379,9 +5379,13 @@ whatwg-encoding@^1.0.1:
   dependencies:
     iconv-lite "0.4.13"
 
-whatwg-fetch@1.0.0, whatwg-fetch@>=0.10.0:
+whatwg-fetch@1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/whatwg-fetch/-/whatwg-fetch-1.0.0.tgz#01c2ac4df40e236aaa18480e3be74bd5c8eb798e"
+
+whatwg-fetch@>=0.10.0:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/whatwg-fetch/-/whatwg-fetch-2.0.1.tgz#078b9461bbe91cea73cbce8bb122a05f9e92b772"
 
 whatwg-url@^4.1.0:
   version "4.1.1"

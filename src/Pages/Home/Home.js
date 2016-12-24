@@ -30,7 +30,7 @@ class Home extends Component {
         <Nav className="nav" />
         <div className="body">
           <DiaryList />
-          <FloatingActionButton style={this.fabStyle} onClick={this.onFabClicked}>
+          <FloatingActionButton style={this.fabStyle} onTouchTap={this.onFabClicked}>
             <ContentAdd/>
           </FloatingActionButton>
         </div>
