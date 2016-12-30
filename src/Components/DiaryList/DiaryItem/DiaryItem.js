@@ -2,6 +2,11 @@ import React, {Component} from 'react';
 import {ListItem} from 'material-ui/List';
 
 class DiaryList extends Component {
+
+  onItemTap = (event) => {
+    this.props.onItemTap(this.props.data);
+  }
+
   render() {
 
     let diaryTitle = this.props.title;
@@ -13,6 +18,7 @@ class DiaryList extends Component {
           primaryText={diaryTitle}
           secondaryText={diaryContentSnippet}
           secondaryTextLines={2}
+          onTouchTap={this.onItemTap}
         />
       </div>
     );

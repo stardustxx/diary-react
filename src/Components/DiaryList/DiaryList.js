@@ -3,26 +3,30 @@ import DiaryItem from './DiaryItem/DiaryItem';
 import {List} from 'material-ui/List';
 import Divider from 'material-ui/Divider';
 import Subheader from 'material-ui/Subheader';
+import {convertFromRaw} from 'draft-js';
 
 class DiaryList extends Component {
   
-  constructor() {
-    super();
-    this.state = {
-      test: []
-    };
-  }
-
-  componentWillMount() {
-    for (let i = 0; i < 10; i++) {
-      this.setState((prevState) => {
-        prevState.test.push({
-          id: i,
-          title: `Hey ${i}`,
-          content: <p>Sup</p>
-        });
+  populateDiary = () => {
+    let diaryListArray = [];
+    for (let key in this.props.diaryList) {
+      if (this.props.diaryList.hasOwnProperty(key)) {
+        this.props.diaryList[key]["refKey"] = key;
+        diaryListArray.push(this.props.diaryList[key]);
+      }
+    }
+    if (diaryListArray.length) {
+      return diaryListArray.map((value, index) => {
+        value.plainText = value.hasOwnProperty("contentData") ? convertFromRaw(value.contentData).getPlainText() : "";
+        return (
+          <div key={value.refKey} >
+            {index !== 0 && <Divider inset={false} />}
+            <DiaryItem data={value} title={value.title} content={value.plainText} onItemTap={this.props.onItemTap} />
+          </div>
+        )
       });
     }
+    return null;
   }
   
   render() {
@@ -30,16 +34,7 @@ class DiaryList extends Component {
       <div>
         <List>
           <Subheader>Diary</Subheader>
-          {
-            this.state.test.map((value, index) => {
-              return (
-                <div key={value.id} >
-                  {index !== 0 && <Divider inset={false} />}
-                  <DiaryItem title={value.title} content={value.content} />
-                </div>
-              )
-            })
-          }
+          {this.populateDiary()}
         </List>
       </div>
     );

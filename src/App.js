@@ -4,7 +4,7 @@ import './App.css';
 import Home from './Pages/Home/Home';
 import Login from './Pages/Login/Login';
 import SignUp from './Pages/SignUp/SignUp';
-import NewNote from './Pages/NewNote/NewNote';
+import Note from './Pages/Note/Note';
 import * as firebase from 'firebase';
 import injectTapEventPlugin from 'react-tap-event-plugin';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
@@ -40,7 +40,8 @@ class App extends Component {
             <Route path="/" component={Home} />
             <Route path="/login" component={Login} />
             <Route path="/signup" component={SignUp} />
-            <Route path="/new" component={NewNote} />
+            <Route path="/note" component={Note} />
+            <Route path="/note/:id" component={Note} />
           </Router>
         </div>
       </MuiThemeProvider>

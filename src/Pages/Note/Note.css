@@ -1,9 +1,9 @@
-.NewNote .body {
+.Note .body {
   max-width: 1200px;
   margin: 0 auto;
 }
 
-.NewNote .body .editor {
+.Note .body .editor {
   /*border: 1px solid grey;*/
   padding: 6px;
   min-height: 300px;
