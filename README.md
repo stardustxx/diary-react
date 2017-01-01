@@ -1,5 +1,6 @@
-## Diary
+# Diary
 
+## Summary
 This project is a simple diary web app made in React with Firebase  
 
 ### Technology and Library
